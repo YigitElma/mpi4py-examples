@@ -24,4 +24,4 @@ An important point to keep in mind is that lower case functions are meant to be 
     comm.Gather(x, recvbuf, root=0)
 ```
 
-This will use faster memory transfer. General Python objects are passed by first ``pickle``ing and then un``pickle`ing, hence it is slower. One can use both for convenience. For instance, let's say we don't know the shape of the arrays, hence cannot create a proper receive buffer, you can first send the shape as a tuple via lower-case function. After creating the receiving buffer, send the bigger array. Since the shape information is very small, the overhead wouldn't hurt. 
+This will use faster memory transfer. General Python objects are passed by first ``pickle``ing and then un``pickle``ing, hence it is slower. One can use both for convenience. For instance, let's say we don't know the shape of the arrays, hence cannot create a proper receive buffer, you can first send the shape as a tuple via lower-case function. After creating the receiving buffer, send the bigger array. Since the shape information is very small, the overhead wouldn't hurt. 
